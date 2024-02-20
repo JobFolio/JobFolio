@@ -13,6 +13,11 @@ app.use(express.urlencoded());
 app.use(express.static(path.resolve(__dirname, "../dist")));
 app.use(express.static(path.resolve(__dirname, "./src/static/images")));
 
+// controller imports
+const jobController = require('./controllers/jobController');
+const userController = require('./controllers/userController');
+const questionController = require('./controllers/questionController');
+
 // sign up user
 app.post('/signup', (req, res) => {
   res.status(200).send('user signed up');
