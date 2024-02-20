@@ -14,9 +14,9 @@ app.use(express.static(path.resolve(__dirname, "../dist")));
 app.use(express.static(path.resolve(__dirname, "./src/static/images")));
 
 // controller imports
-const jobController = require('./controllers/jobController');
-const userController = require('./controllers/userController');
-const questionController = require('./controllers/questionController');
+const jobController = require('./controllers/jobController.js');
+const userController = require('./controllers/userController.js');
+const questionController = require('./controllers/questionController.js');
 
 // sign up user
 app.post('/signup', (req, res) => {
