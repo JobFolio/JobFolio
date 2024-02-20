@@ -13,12 +13,6 @@ app.use(express.urlencoded());
 app.use(express.static(path.resolve(__dirname, "../dist")));
 app.use(express.static(path.resolve(__dirname, "./src/static/images")));
 
-app.get("/", (req, res) => {
-  console.log("hello server");
-  return res
-    .status(200)
-    .sendFile(path.resolve(__dirname, "../src/static/index.html"));
-});
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
