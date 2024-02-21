@@ -3,20 +3,22 @@ import SignIn from "./SignIn";
 
 export default function LogInContainer(){
 
-
+//post to backend with input info
     return(
-        <div id="log_in_page_container">
-            <div id='logIn_container'>
+        <div id='log_in_page_container'>
+        <div id="log_in_page_button_container">
+           
             <div id="username_input">
-            <span>Username</span>
+            <p>Username</p>
             <input placeholder="username"></input>
             </div>
             <div id='password_input'>
-            <span>Password</span>
+            <p>Password</p>
             <input placeholder="password"></input>
             </div>
-            </div>
             <SignIn/>
+              
+        </div>
         </div>
     )
 }

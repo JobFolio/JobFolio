@@ -1,15 +1,81 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Open Sans", "PT Sans";
+  }
 
-#logIn_container {
-    border: 3px solid rgb(0, 255, 234);
-    height: 100px;
-    width: 150px;
+#log_in_page_container{
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px ;
+    height: 410px;
+    margin: 6rem auto 8.1rem auto;
+    width: 329px;
     border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 4rem;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #47762e;
 }
 
-.signIn-signUp {
-    text-align: center;
+
+.signIn-signUp{
+   display: flex;
+   justify-content: center;
 }
+
+input {
+    width:98%;
+    line-height: 2.4rem;
+    border-radius: 5px;
+    border: 1px solid green;
+    padding-left: 1rem;
+    outline: 0;
+}
+
+.signIn-signUp{
+   margin-top: .4rem;
+}
+
+#signIn_button {
+  background: -webkit-linear-gradient(right, #47762e, #2dbd6e);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 153px;
+  margin-right: 1rem;
+}
+#signUp_button {
+  background: -webkit-linear-gradient(right, #47762e, #2dbd6e);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 153px;
+  margin-left: 1rem;
+}
+
+p {
+    margin-bottom: .2rem;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+
+

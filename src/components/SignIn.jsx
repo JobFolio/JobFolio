@@ -15,6 +15,7 @@ return (
 <div className="signIn-signUp">
     <button onClick={() => dispatch(confirmLogIn())} id="signIn_button" type="submit">Sign In</button>
     {/* <button onClick={() => dispatch(confirmLogIn())} id="signUp_button" type="submit">Sign Up</button> */}
+    <button  id="signUp_button" type="submit">Sign Up</button>
 </div>
 
 )
