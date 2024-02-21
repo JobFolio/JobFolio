@@ -8,20 +8,20 @@ export default function JobApp(){
     }
     // const dispatch = useDispatch();
     console.log('clicker: ', clicker);
-    const navigate = useNavigate();
-    if(clicker) navigate('/editPage');
+    // const navigate = useNavigate();
+    // if(clicker) navigate('/editPage');
 return (
-    <div style={{display : 'inline-block'}}>
-        <p>Company: company</p>
-        <p>Job Ttile: job title</p>
-        <p>Industry: industry</p>
-        <p>Due Date: 1/1/11</p>
-        <p>Start Date: 2/2/22</p>
-        <p>Location: In-Person NYC</p>
-        <p>Salary: 200k</p>
-        <p>Connection: my friend</p>
-        <button id="editPage_button" type="submit" onClick={clicked()}>Job Application Edit Page!</button>
-        <button id="delete_button" type="submit">Delete App</button>
+    <div id='job_container' style={{display : 'inline-block'}}>
+        <p>Company: <span>AirBnb</span></p>
+        <p>Job Ttile: <span>job title</span></p>
+        <p>Industry: <span>industry</span></p>
+        <p>Due Date: <span>1/1/11</span></p>
+        <p>Start Date: <span>2/2/22</span></p>
+        <p>Location: <span>In-Person NYC</span></p>
+        <p>Salary: <span>200k</span></p>
+        <p>Connection: <span>my friend</span></p>
+        {/* <button id="editPage_button" type="submit" onClick={clicked()}>Job Application Edit Page!</button>
+        <button id="delete_button" type="submit">Delete App</button> */}
     </div>
 )
 };
