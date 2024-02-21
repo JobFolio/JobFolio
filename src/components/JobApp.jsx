@@ -19,8 +19,8 @@ return (
         <p>Location: <span>In-Person NYC</span></p>
         <p>Salary: <span>200k</span></p>
         <p>Connection: <span>my friend</span></p>
-        {/* <button id="editPage_button" type="submit" onClick={clicked()}>Job Application Edit Page!</button>
-        <button id="delete_button" type="submit">Delete App</button> */}
+        <button id="editPage_button" type="submit" onClick={() => dispatch(editClicked())}>Job Application Edit Page!</button>
+        <button id="delete_button" type="submit">Delete App</button>
     </div>
 )
 };
