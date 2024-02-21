@@ -7,8 +7,6 @@ return (
     <div>
         <div>
         <JobApp />
-        <JobApp />
-        <JobApp />
         </div>
         <button id="newApp_button" type="submit">Add An Application!</button>
     </div>
