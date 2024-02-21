@@ -8,6 +8,6 @@ import Store from './reducers/store.js';
 const root = createRoot(document.getElementById("root"));
 root.render(
 <Provider store={Store}>
-   (<App />);
+   <App />
 </Provider>
 );
