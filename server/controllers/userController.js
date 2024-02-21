@@ -45,13 +45,37 @@ userController.postUser = async (req, res, next) => {
         }; 
         return next(err); 
     }
-
-
     
 };
 
 //login in
-userController.getUser = (req, res, next) => {
+userController.getUser = async (req, res, next) => {
+    console.log('inside login controller');
+    console.log(req.params.username, req.params.password); 
+
+    try {
+        //query to join the users table with all the data of jobs table so username is associated with its own specific data
+        const queryUserPassword = {
+            text: 'SELECT Users.id, Jobs.title, Jobs.field, Jobs.duedate, Jobs.startdate, Jobs.location, Jobs.salary, Jobs.description FROM Users LEFT OUTER JOIN Jobs ON Users.id = Jobs.users_id WHERE Users.username = $1 AND Users.password = $2;',
+            values: [req.params.username, req.params.password],
+        };
+        //store username and password as user
+        const user = await db.query(queryUserPassword); 
+
+        res.locals.user = user.rows; 
+
+        return next(); 
+    }
+    catch {
+        const err = {
+            log: 'Express error handler caught in userController.getUser', 
+            status: 500, 
+            message: { err: 'An error has occured with login!'}
+        }; 
+        return next(err); 
+
+    }
+
 
 };
 
