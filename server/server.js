@@ -24,10 +24,10 @@ app.post('/signup', userController.postUser, (req, res) => {
 });
 
 // // log in user
-// app.get('/login', userController.getUser, (req, res) => {
-//   // redirect to main page occurs here
-//   res.status(200).send('user logged in');
-// });
+app.get('/login', userController.getUser, (req, res) => {
+  // redirect to main page occurs here
+  res.status(200).send('user logged in');
+});
 
 // // add job
 // app.post('/addJob', jobController.postJob, (req, res) => {
