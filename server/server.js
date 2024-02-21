@@ -23,34 +23,34 @@ app.post('/signup', userController.postUser, (req, res) => {
   res.status(200).send('user signed up');
 });
 
-// log in user
-app.get('/login', userController.getUser, (req, res) => {
-  // redirect to main page occurs here
-  res.status(200).send('user logged in');
-});
+// // log in user
+// app.get('/login', userController.getUser, (req, res) => {
+//   // redirect to main page occurs here
+//   res.status(200).send('user logged in');
+// });
 
-// add job
-app.post('/addJob', jobController.postJob, (req, res) => {
-  res.status(200).send('job added');
-});
+// // add job
+// app.post('/addJob', jobController.postJob, (req, res) => {
+//   res.status(200).send('job added');
+// });
 
-// get job
-app.get('/getJob', jobController.getJob, (req, res) => {
-  res.status(200).send('jobs grabbed');
-});
+// // get job
+// app.get('/getJob', jobController.getJob, (req, res) => {
+//   res.status(200).send('jobs grabbed');
+// });
 
-// add question
-app.post('/addQuestion', questionController.postQuestion, (req, res) => {
-  res.status(200).send('questions added');
-});
+// // add question
+// app.post('/addQuestion', questionController.postQuestion, (req, res) => {
+//   res.status(200).send('questions added');
+// });
 
-// get question
-app.get('/getQuestions', questionController.getQuestion, (req, res) => {
-  res.status(200).send('questions retrieved');
-})
+// // get question
+// app.get('/getQuestions', questionController.getQuestion, (req, res) => {
+//   res.status(200).send('questions retrieved');
+// })
 
-app.listen(port, () => {
-  console.log(`server is running on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`server is running on port ${port}`);
+// });
 
 module.exports = app;
