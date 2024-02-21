@@ -1,15 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { editClicked } from "../reducers/editPageSlice";
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function JobApp(){
-    let clicker = false;
-    const clicked = ()=>{
-        clicker = true;
-    }
-    // const dispatch = useDispatch();
-    console.log('clicker: ', clicker);
-    // const navigate = useNavigate();
-    // if(clicker) navigate('/editPage');
+    const { isClicked }  = useSelector((state) => state.editClicked || { isClicked: false });
+    const dispatch = useDispatch();
+    console.log('isClicked in JobApp: ', isClicked);
+    const navigate = useNavigate();
+    if(isClicked) navigate('/editPage');
 return (
     <div id='job_container' style={{display : 'inline-block'}}>
         <p>Company: <span>AirBnb</span></p>
@@ -20,8 +19,8 @@ return (
         <p>Location: <span>In-Person NYC</span></p>
         <p>Salary: <span>200k</span></p>
         <p>Connection: <span>my friend</span></p>
-        {/* <button id="editPage_button" type="submit" onClick={clicked()}>Job Application Edit Page!</button>
-        <button id="delete_button" type="submit">Delete App</button> */}
+        <button id="editPage_button" type="submit" onClick={() => dispatch(editClicked())}>Job Application Edit Page!</button>
+        <button id="delete_button" type="submit">Delete App</button>
     </div>
 )
 };
