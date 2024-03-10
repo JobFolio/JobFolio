@@ -3,12 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { editClicked } from "../reducers/editPageSlice";
 import { useDispatch, useSelector } from 'react-redux';
 
-export default function JobApp(){
+export default function JobApp() {
+    
     const { isClicked }  = useSelector((state) => state.editClicked || { isClicked: false });
     const dispatch = useDispatch();
     console.log('isClicked in JobApp: ', isClicked);
     const navigate = useNavigate();
     if(isClicked) navigate('/editPage');
+
+
 return (
     <div>
         <div id='job_airbnb' style={{display : 'inline-block'}}>
